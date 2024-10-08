@@ -1,0 +1,12 @@
+➜  ~ cd Desktop 
+➜  Desktop cd PerScholas
+➜  PerScholas mkdir code
+➜  PerScholas cd code
+➜  code mkdir module_301
+➜  code cd module_301 
+➜  module_301 mkdir 2024-10-04-command-line
+➜  module_301 cd 2024-10-04-command-line 
+➜  2024-10-04-command-line touch notes.txt
+➜  2024-10-04-command-line ls
+notes.txt
+➜  2024-10-04-command-line 

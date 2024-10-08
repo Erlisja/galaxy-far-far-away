@@ -1,0 +1,72 @@
+SETUP
+➜  2024-10-04-command-line mkdir galaxy-far-far-away
+➜  2024-10-04-command-line ls
+galaxy-far-far-away notes.txt
+➜  2024-10-04-command-line cd galaxy-far-far-away 
+➜  galaxy-far-far-away touch commands.txt
+
+PART 1: SET THE SCENE
+➜  galaxy-far-far-away mkdir death_star
+➜  galaxy-far-far-away cd death_star 
+➜  death_star touch darth_vadar.txt princess_leila.txt storm_trooper.txt
+➜  death_star ls
+darth_vadar.txt    princess_leila.txt storm_trooper.txt
+➜  galaxy-far-far-away mkdir tatooine
+➜  galaxy-far-far-away cd tatooine 
+➜  tatooine touch luke.txt ben_kenobi.txt
+➜  tatooine ls
+ben_kenobi.txt luke.txt
+➜  tatooine     mkdir millenium_falcon
+➜  tatooine cd millenium_falcon 
+➜  millenium_falcon touch han_solo.txt chewbaca.txt
+➜  millenium_falcon ls
+chewbaca.txt han_solo.txt
+➜  millenium_falcon 
+
+PART 2: RENAME
+ tatooine ls
+ben_kenobi.txt   luke.txt         millenium_falcon
+➜  tatooine mv ben_kenobi.txt obi_wan.txt
+➜  tatooine ls
+luke.txt         millenium_falcon obi_wan.txt
+➜  tatooine 
+
+PART 3: COPY
+➜  death_star cp storm_trooper.txt ../tatooine/.
+➜  death_star cd ..
+➜  galaxy-far-far-away ls
+commands.txt death_star   tatooine
+➜  galaxy-far-far-away cd tatooine
+➜  tatooine ls
+luke.txt          millenium_falcon  obi_wan.txt       storm_trooper.txt
+➜  tatooine
+
+PART 4: MOVE
+
+ tatooine mv obi_wan.txt storm_trooper.txt millenium_falcon 
+➜  tatooine ls
+luke.txt         millenium_falcon
+➜  tatooine cd millenium_falcon 
+➜  millenium_falcon ls
+chewbaca.txt      han_solo.txt      obi_wan.txt       storm_trooper.txt
+2. ➜  tatooine mv millenium_falcon ../../galaxy-far-far-away 
+3. ➜  galaxy-far-far-away mv millenium_falcon death_star 
+
+
+
+    THE REST OF THE HOMEWORK
+
+storm_trooper.txt tie_fighter_1     tie_fighter_2     tie_fighter_3
+➜  death_star cp  storm_trooper.txt tie_fighter_3
+➜  death_star ls
+storm_trooper.txt tie_fighter_1     tie_fighter_2     tie_fighter_3
+➜  death_star mv tie_fighter_1 tie_fighter_2 tie_fighter_3 ../../galaxy-far-far-away 
+➜  death_star cd ..
+➜  galaxy-far-far-away rm -r tie_fighter_2 tie_fighter_3
+➜  galaxy-far-far-away cd x_wing 
+➜  x_wing ls
+➜  x_wing touch the_force.txt
+➜  x_wing cd ..
+➜  galaxy-far-far-away rm -r death_star 
+➜  galaxy-far-far-away mv millenium_falcon x_wing yavin_4 
+➜  galaxy-far-far-away 
